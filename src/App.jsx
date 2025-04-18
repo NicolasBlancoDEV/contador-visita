@@ -40,6 +40,18 @@ function App() {
       </p>
     </div>
   );
+
+  console.log('Renderizando, visitCount:', visitCount);
+return (
+  <div style={{ /* estilos */ }}>
+    <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>
+      Contador de Visitas
+    </h1>
+    <p style={{ fontSize: '18px', marginTop: '10px' }}>
+      Total de visitas: {visitCount}
+    </p>
+  </div>
+);
 }
 
 export default App;
