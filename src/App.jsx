@@ -6,8 +6,11 @@ function App() {
   const [visitCount, setVisitCount] = useState(0);
 
   useEffect(() => {
+    console.log('Escuchando cambios en visits...');
+    console.log('Firebase inicializado:', db);
     const unsubscribe = onSnapshot(collection(db, 'visits'), (snapshot) => {
       const totalVisits = snapshot.docs.length;
+      console.log('Snapshot recibido, total de visitas:', totalVisits);
       setVisitCount(totalVisits);
     }, (error) => {
       console.error('Error obteniendo conteo de visitas:', error);
